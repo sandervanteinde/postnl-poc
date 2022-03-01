@@ -1,0 +1,25 @@
+<app-form [formGroup]="form">
+  <mat-form-field>
+    <mat-label>Depot</mat-label>
+    <mat-select formControlName="depot">
+      <mat-option
+        [value]="depot"
+        *ngFor="let depot of availableDepots$ | async"
+      >
+        {{ depot.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Functie</mat-label>
+    <mat-select formControlName="function">
+      <mat-option
+        [value]="function"
+        *ngFor="let function of availableFunctions$ | async"
+      >
+        {{ function.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</app-form>

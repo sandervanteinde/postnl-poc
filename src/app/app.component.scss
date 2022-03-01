@@ -1,0 +1,19 @@
+:host {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  padding-bottom: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  background-color: #eee;
+  flex-grow: 1;
+}
