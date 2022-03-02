@@ -1,7 +1,7 @@
 <div class="header">
   <img
     [@animatedHeder]="(hasCenteredLogo$ | async) === false ? 'left' : 'center'"
-    src="/assets/postnl.png"
+    src="assets/postnl.png"
   />
 
   <app-user-state *ngIf="(hasCenteredLogo$ | async) !== true"></app-user-state>
