@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --configuration production --base-href https://sandervanteinde.github.io/postnl-poc",
+    "build:prod": "ng build --configuration production --base-href /postnl-poc/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
