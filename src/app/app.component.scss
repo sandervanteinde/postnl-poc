@@ -4,13 +4,28 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .header {
-  padding-bottom: 10px;
+  padding: 10px 0;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  margin-bottom: 10px;
   display: flex;
-  justify-content: center;
+  margin: 0 5px;
+  align-items: center;
+  justify-content: space-between;
+
+  img {
+    position: relative;
+    left: 0px;
+    animation: 300ms;
+  }
+
+  &--centered {
+    img {
+      left: calc(50% - 40px);
+    }
+  }
 }
 
 .content {

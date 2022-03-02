@@ -1,0 +1,25 @@
+<app-form [formGroup]="form">
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="username" autocomplete="email" />
+    <mat-error *ngIf="form.controls.username.hasError('email')">
+      Onjuist email adres
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Wachtwoord</mat-label>
+    <input
+      type="password"
+      matInput
+      formControlName="password"
+      autocomplete="current-password"
+    />
+    <mat-error *ngIf="form.controls.password.hasError('invalidCombination')">
+      Onbekend email/wachtwoord
+    </mat-error>
+  </mat-form-field>
+
+  <button type="button" (click)="submit()" mat-stroked-button color="primary">
+    Login
+  </button>
+</app-form>

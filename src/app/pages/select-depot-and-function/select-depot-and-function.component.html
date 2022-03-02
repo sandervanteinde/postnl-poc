@@ -1,4 +1,5 @@
 <app-form [formGroup]="form">
+  <h2>Depot</h2>
   <mat-form-field>
     <mat-label>Depot</mat-label>
     <mat-select formControlName="depot">
@@ -11,6 +12,7 @@
     </mat-select>
   </mat-form-field>
 
+  <h2>Functie</h2>
   <mat-form-field>
     <mat-label>Functie</mat-label>
     <mat-select formControlName="function">
@@ -22,4 +24,14 @@
       </mat-option>
     </mat-select>
   </mat-form-field>
+
+  <button
+    [disabled]="!(canClickContinue$ | async)"
+    type="button"
+    [routerLink]="['/select-shift']"
+    mat-stroked-button
+    color="primary"
+  >
+    Volgende
+  </button>
 </app-form>

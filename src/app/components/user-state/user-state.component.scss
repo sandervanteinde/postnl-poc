@@ -1,0 +1,24 @@
+:host {
+  display: grid;
+  grid-template:
+    "depot function"
+    "name name";
+  gap: 10px;
+}
+
+.user-state {
+  &__depot {
+    grid-area: depot;
+    font-size: 10px;
+  }
+
+  &__function {
+    grid-area: function;
+    font-size: 10px;
+  }
+
+  &__user {
+    grid-area: name;
+    text-align: center;
+  }
+}
