@@ -1,6 +1,6 @@
 name: Build GH-Pages
 env:
-  PUBLISH_DIR: Sandervanteinde.AdventOfCode2021/bin/Release/net6.0/publish/wwwroot
+  PUBLISH_DIR: /dist
 
 on:
   push:
@@ -12,13 +12,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v1
+      - name: Node 14.x
+        uses: actions/setup-node@v1
         with:
-          dotnet-version: 6.0.x
+          node-version: 14.x
 
-      - name: Publish app
-        run: dotnet publish Sandervanteinde.AdventOfCode2021 -c Release
+      - name: npm i and build
+        run: |
+          npm i
+          npm run build:prod
 
       # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
       - name: Add .nojekyll file
