@@ -1,6 +1,6 @@
 name: Build GH-Pages
 env:
-  PUBLISH_DIR: dist
+  PUBLISH_DIR: dist/postnl-poc
 
 on:
   push:
