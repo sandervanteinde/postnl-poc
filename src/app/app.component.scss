@@ -6,6 +6,7 @@
   flex-direction: column;
   overflow-x: hidden;
   overflow-y: auto;
+  height: -webkit-fill-available;
 }
 .header {
   padding: 10px 0;

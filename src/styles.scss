@@ -39,6 +39,7 @@ $postnl-poc-theme: mat.define-light-theme(
 html,
 body {
   height: 100vh;
+  height: -webkit-fill-available;
 }
 body {
   margin: 0;
