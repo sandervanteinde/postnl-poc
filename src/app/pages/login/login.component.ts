@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { FormBuilder } from '@ngneat/reactive-forms';
 import { UserService } from 'src/app/services/user.service';
 import { StateService } from 'src/app/state/postnl-poc-state.service';
 import { environment } from 'src/environments/environment';
@@ -31,10 +30,10 @@ export class LoginComponent {
   }
 
   submit(): void {
-    this.form.controls.password.removeError('invalidCombination');
+    delete this.form.controls.password.errors?.['invalidCombination'];
     const value = this.form.value;
     this._userService
-      .attemptLogin(value.username, value.password)
+      .attemptLogin(value.username!, value.password!)
       .subscribe((userOrNull) => {
         if (userOrNull === null) {
           this.form.controls.password.setErrors({ invalidCombination: true });

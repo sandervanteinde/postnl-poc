@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@ngneat/reactive-forms';
+import { FormBuilder } from '@angular/forms';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { map } from 'rxjs';
 import { Depot } from 'src/app/models/depot';
@@ -30,12 +30,12 @@ export class SelectDepotAndFunctionComponent {
     private readonly _fb: FormBuilder,
     private readonly _state: StateService
   ) {
-    this.form.controls.depot.value$
+    this.form.controls.depot.valueChanges
       .pipe(untilDestroyed(this))
       .subscribe((selectedDepot) =>
         this._state.updateState({ depot: selectedDepot })
       );
-    this.form.controls.function.value$
+    this.form.controls.function.valueChanges
       .pipe(untilDestroyed(this))
       .subscribe((selectedFunction) =>
         this._state.updateState({ depotFunction: selectedFunction })
