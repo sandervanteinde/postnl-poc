@@ -18,4 +18,17 @@
       </p>
     </mat-card-content>
   </mat-card>
+
+  <button type="button" mat-raised-button color="primary">Akkoord</button>
+  <button type="button" mat-stroked-button color="primary">
+    Extra / overige
+  </button>
+  <button
+    [routerLink]="['/', 'select-depot']"
+    type="button"
+    mat-stroked-button
+    color="basic"
+  >
+    Vorige
+  </button>
 </app-form>
