@@ -26,8 +26,8 @@
   ],
   "depotFunctions": [
     {
-      "id": "function-manager",
-      "name": "Functiemanager"
+      "id": "proces-manager",
+      "name": "Procesmanager"
     },
     {
       "id": "help-process-manager",
