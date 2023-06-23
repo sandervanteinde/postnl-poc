@@ -1,14 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  ActivatedRouteSnapshot,
-  CanActivate,
-  CanActivateChild,
-  Data,
-  Route,
-  Router,
-  RouterStateSnapshot,
-  UrlTree,
-} from '@angular/router';
+import { ActivatedRouteSnapshot, Data, Route, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 import {
   PostNlPocState,
@@ -26,7 +17,7 @@ export interface StateGuardRoute extends Route {
 export type StateGuardRoutes = Array<StateGuardRoute>;
 
 @Injectable({ providedIn: 'root' })
-export class EnsureStateGuard implements CanActivateChild {
+export class EnsureStateGuard  {
   constructor(
     private readonly _postnlPocStateService: StateService,
     private readonly _router: Router
