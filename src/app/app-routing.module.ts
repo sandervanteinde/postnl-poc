@@ -7,6 +7,7 @@ import {
 import { LoginComponent } from './pages/login/login.component';
 import { SelectDepotAndFunctionComponent } from './pages/select-depot-and-function/select-depot-and-function.component';
 import { SelectShiftComponent } from './pages/select-shift/select-shift.component';
+import {ShiftLandingPageComponent} from "./pages/shift-landing-page/shift-landing-page.component";
 
 const routes: StateGuardRoutes = [
   {
@@ -38,6 +39,14 @@ const routes: StateGuardRoutes = [
           redirectToOnInvalidState: ['/select-depot'],
         },
       },
+      {
+        path: 'shift',
+        component: ShiftLandingPageComponent,
+        data: {
+          requiredState: state => state.shift !== null,
+          redirectToOnInvalidState: ['/select-shift']
+        }
+      }
     ],
   },
 ];

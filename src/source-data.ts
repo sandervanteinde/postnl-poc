@@ -1,5 +1,6 @@
 import { User } from './app/models/user';
 import data from './source-data.json';
+import {Shift} from "./app/models/shift";
 
 export class SourceData {
   static users = data.users;

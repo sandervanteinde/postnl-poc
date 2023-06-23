@@ -2,24 +2,22 @@
   <h2>Selecteer dienst</h2>
   <mat-form-field>
     <mat-select [(value)]="selectedShift">
-      <mat-option [value]="0">Dienst 1</mat-option>
-      <mat-option [value]="1">Dienst 2</mat-option>
-      <mat-option [value]="2">Dienst 3</mat-option>
+      <mat-option *ngFor="let shift of shifts; let index = index" [value]="index">{{shift.name}}</mat-option>
     </mat-select>
   </mat-form-field>
 
   <mat-card>
     <mat-card-header>
-      <mat-card-title> Dienst {{ selectedShift + 1 }} </mat-card-title>
+      <mat-card-title>{{shifts?.[selectedShift]?.name}}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <p *ngFor="let shift of shifts[selectedShift]">
+      <p *ngFor="let shift of shifts[selectedShift].items">
         {{ shift.startTime }} - {{ shift.endTime }}: {{ shift.description }}
       </p>
     </mat-card-content>
   </mat-card>
 
-  <button type="button" mat-raised-button color="primary">Akkoord</button>
+  <button type="button" mat-raised-button color="primary" (click)="confirmSelectedShift()">Akkoord</button>
   <button type="button" mat-stroked-button color="primary">
     Extra / overige
   </button>

@@ -1,0 +1,20 @@
+<app-form>
+  <h2>{{name$ | async}}</h2>
+
+  <button type="button" mat-stroked-button color="primary">Verzend</button>
+  <button type="button" mat-stroked-button color="primary">Poot 1</button>
+  <button type="button" mat-stroked-button color="primary">Opvoerplein</button>
+  <button type="button" mat-stroked-button color="primary">Administratie</button>
+  <button type="button" mat-stroked-button color="primary">Poot 2</button>
+
+  <button
+    [routerLink]="['/', 'select-shift']"
+    type="button"
+    mat-stroked-button
+    color="basic"
+  >
+    Vorige
+  </button>
+
+
+</app-form>

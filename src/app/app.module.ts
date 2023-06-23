@@ -15,6 +15,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatCardModule } from '@angular/material/card';
 import { SelectShiftComponent } from './pages/select-shift/select-shift.component';
 import { UserStateComponent } from './components/user-state/user-state.component';
+import { ShiftLandingPageComponent } from './pages/shift-landing-page/shift-landing-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { UserStateComponent } from './components/user-state/user-state.component
     LoginComponent,
     SelectShiftComponent,
     UserStateComponent,
+    ShiftLandingPageComponent,
   ],
   imports: [
     BrowserModule,
